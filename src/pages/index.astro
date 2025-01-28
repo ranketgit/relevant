@@ -30,14 +30,12 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Making content that is worth watching"
+					tagline="We’re RELEVANT, a content marketing agency in Casablanca helping brands go viral, stay relevant, and drive real business growth."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><a href="/#contact" class="text-white hover:scale-x-105 transition-transform duration-300">Let’s Make Something Relevant Together </a></Pill>
 					</div>
 				</Hero>
 
@@ -45,20 +43,18 @@ const projects = (await getCollection('work'))
 					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/portrait.webp"
 				/>
 			</header>
-
-			<Skills />
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
+			<section class="section relative with-background">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Proof of Relevance</h3>
+					<p>Here's how we've helped brands capture attention and drive growth</p>
 				</header>
-
+			
 				<div class="gallery">
 					<Grid variant="offset">
 						{
@@ -70,34 +66,193 @@ const projects = (await getCollection('work'))
 						}
 					</Grid>
 				</div>
+			
+				<div class="content-center  text-center mt-16">
+					<div class="bg-gray-900/5 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 max-w-2xl mx-auto">
+						<p class="text-xl text-gray-500 mb-6">Want to see more? Let's chat about what we can do for your brand.</p>
+						<a 
+							href="/#contact" 
+							class="inline-flex items-center px-8 py-3 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 hover:scale-105 transform transition-all duration-200"
+						>
+							Let's Talk
+						</a>
+					</div>
+				</div>
+			</section>
+			<section id="contact" class="max-w-7xl mx-auto px-4 py-20">
+				<div class="text-center mb-16">
+					<h3 class="text-4xl md:text-5xl font-bold mb-4">Let’s Create Something Relevant</h3>
+					<p class="text-gray-400 text-lg">Whether you’re looking to go viral, grow your audience, or tell your story, we’re ready to help.</p>
+				</div>
+			
+				<div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+					<!-- Contact Details -->
+					<div class="bg-gray-900/5 p-8 rounded-2xl backdrop-blur-sm border border-gray-800">
+						<h4 class="text-2xl font-bold mb-8">Contact Details</h4>
+						
+						<div class="space-y-6">
+							<div class="flex items-center gap-4">
+								<div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-600 text-white">
+									✉
+								</div>
+								<div>
+									<h5 class="text-lg font-semibold">Email</h5>
+									<a href="mailto:contact@relevant.ma" class="text-gray-400 hover:text-purple-500 transition-colors">
+										contact@relevant.ma
+									</a>
+								</div>
+							</div>
+			
+							<div class="flex items-center gap-4">
+								<div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-600 text-white">
+									📞
+								</div>
+								<div>
+									<h5 class="text-lg font-semibold">Phone</h5>
+									<a href="tel:+21263524627" class="text-gray-400 hover:text-purple-500 transition-colors">
+										+212 63524627
+									</a>
+								</div>
+							</div>
+			
+							<div class="flex items-center gap-4">
+								<div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-600 text-white">
+									📍
+								</div>
+								<div>
+									<h5 class="text-lg font-semibold">Location</h5>
+									<p class="text-gray-400">Technopark Casablanca, Morocco</p>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+					<!-- Form -->
+					<form 
+						action="https://formsubmit.co/contact@relevant.ma" 
+						method="POST"
+						class="bg-gray-900/5 p-8 rounded-2xl backdrop-blur-sm border border-gray-800"
+					>
+						<div class="space-y-6">
+							<div>
+								<label for="name" class="block text-sm font-medium mb-2">Name</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									required
+									class="w-full px-4 py-3 bg-gray-800/5 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 transition-colors"
+									placeholder="Your name"
+								/>
+							</div>
+			
+							<div>
+								<label for="email" class="block text-sm font-medium mb-2">Email</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									required
+									class="w-full px-4 py-3 bg-gray-800/5 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 transition-colors"
+									placeholder="your@email.com"
+								/>
+							</div>
 
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
+							<div>
+								<label for="phone" class="block text-sm font-medium mb-2">Phone Number</label>
+								<input
+									type="tel"
+									id="phone"
+									name="phone"
+									required
+									class="w-full px-4 py-3 bg-gray-800/5 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 transition-colors"
+									placeholder="your phone number"
+								/>
+							</div>
+			
+							<div>
+								<label for="message" class="block text-sm font-medium mb-2">Message</label>
+								<textarea
+									id="message"
+									name="message"
+									required
+									rows="5"
+									class="w-full px-4 py-3 bg-gray-800/5 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 transition-colors resize-none"
+									placeholder="Tell us about your project..."
+								></textarea>
+							</div>
+			
+							<button
+								type="submit"
+								class="px-8 py-3 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 hover:scale-105 transform transition-all duration-200"
+							>
+							Send Your Message
+							</button>
+						</div>
+			
+						<!-- FormSubmit Requirements -->
+						<input type="hidden" name="_subject" value="New contact form submission!">
+						<input type="hidden" name="_captcha" value="false">
+						<input type="text" name="_honey" style="display:none">
+						<input type="hidden" name="_template" value="table">
+					</form>
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+			<section id="services" class="py-16 relative">
+				{/* Section Header */}
+				<div class="text-center max-w-2xl mx-auto px-4 mb-12">
+					<h3 class="text-4xl font-bold mb-4">What We Do Best</h3>
+					<p class="text-gray-400 text-lg">
+						Our expertise in content creation and marketing helps brands stay ahead in the digital landscape
 					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
+				</div>
+			
+				{/* Services Grid */}
+				<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+					{/* Content Strategy Card */}
+					<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
+						<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+							</svg>
+						</div>
+						<h4 class="text-xl font-bold mb-4">Content Strategy & Planning</h4>
+						<p class="text-gray-400">We design data-driven strategies tailored to your audience and business goals.</p>
+					</div>
+			
+					{/* Social Media Card */}
+					<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
+						<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+							</svg>
+						</div>
+						<h4 class="text-xl font-bold mb-4">Social Media Management</h4>
+						<p class="text-gray-400">From ideation to execution, we create content that keeps your audience engaged and growing.</p>
+					</div>
+			
+					{/* Video Production Card */}
+					<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
+						<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+							</svg>
+						</div>
+						<h4 class="text-xl font-bold mb-4">Video Production & Viral Campaigns</h4>
+						<p class="text-gray-400">High-quality video content that entertains, informs, and converts.</p>
+					</div>
+			
+					{/* Analytics Card */}
+					<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
+						<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+							</svg>
+						</div>
+						<h4 class="text-xl font-bold mb-4">Analytics & Optimization</h4>
+						<p class="text-gray-400">We measure, analyze, and optimize your content for better performance and ROI.</p>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -107,146 +262,223 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <style>
-	.hero {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-	}
 
-	.roles {
-		display: none;
-	}
+	
+	/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
 
-	.hero img {
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+.roles {
+    display: none;
+}
 
-	@media (min-width: 50em) {
-		.hero {
-			display: grid;
-			grid-template-columns: 6fr 4fr;
-			padding-inline: 2.5rem;
-			gap: 3.75rem;
-		}
+.hero img {
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+}
 
-		.roles {
-			margin-top: 0.5rem;
-			display: flex;
-			gap: 0.5rem;
-		}
+@media (min-width: 50em) {
+    .hero {
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        padding-inline: 2.5rem;
+        gap: 3.75rem;
+    }
 
-		.hero img {
-			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
-			object-fit: cover;
-		}
-	}
+    .roles {
+        margin-top: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+    }
 
-	/* ====================================================== */
+    .hero img {
+        aspect-ratio: 3 / 4;
+        border-radius: 4.5rem;
+        object-fit: cover;
+    }
+}
 
-	.section {
-		display: grid;
-		gap: 2rem;
-	}
+/* Section Styles */
+.section {
+    display: grid;
+    gap: 2rem;
+}
 
-	.with-background {
-		position: relative;
-	}
+.with-background {
+    position: relative;
+}
 
-	.with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
+.with-background::before {
+    --hero-bg: var(--bg-image-subtle-2);
 
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		left: 50%;
-		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
-		top: 0;
-		transform: translateY(-75%) translateX(-50%);
-		background:
-			url('/assets/backgrounds/noise.png') top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-			var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
-		mix-blend-mode: var(--bg-blend-mode);
-		z-index: -1;
-	}
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    width: 100vw;
+    aspect-ratio: calc(2.25 / var(--bg-scale));
+    top: 0;
+    transform: translateY(-75%) translateX(-50%);
+    background:
+        url('/assets/backgrounds/noise.png') top center/220px repeat,
+        var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
+        var(--gray-999);
+    background-blend-mode: overlay, normal, normal, normal;
+    mix-blend-mode: var(--bg-blend-mode);
+    z-index: -1;
+}
 
-	.with-background.bg-variant::before {
-		--hero-bg: var(--bg-image-subtle-1);
-	}
+.with-background.bg-variant::before {
+    --hero-bg: var(--bg-image-subtle-1);
+}
 
-	.section-header {
-		justify-self: center;
-		text-align: center;
-		max-width: 50ch;
-		font-size: var(--text-md);
-		color: var(--gray-300);
-	}
+.section-header {
+    justify-self: center;
+    text-align: center;
+    max-width: 50ch;
+    font-size: var(--text-md);
+    color: var(--gray-300);
+}
 
-	.section-header h3 {
-		font-size: var(--text-2xl);
-	}
+.section-header h3 {
+    font-size: var(--text-2xl);
+}
 
-	@media (min-width: 50em) {
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
-		}
+@media (min-width: 50em) {
+    .section {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+        gap: 5rem;
+    }
 
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-		}
+    .section.with-cta {
+        grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+    }
 
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
-		}
+    .section-header {
+        grid-area: header;
+        font-size: var(--text-lg);
+    }
 
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
+    .section-header h3 {
+        font-size: var(--text-4xl);
+    }
 
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
+    .with-cta .section-header {
+        justify-self: flex-start;
+        text-align: left;
+    }
 
-		.gallery {
-			grid-area: gallery;
-		}
+    .gallery {
+        grid-area: gallery;
+    }
 
-		.cta {
-			grid-area: cta;
-		}
-	}
+    .cta {
+        grid-area: cta;
+    }
+}
 
-	/* ====================================================== */
+/* Mention Cards */
+.mention-card {
+    display: flex;
+    height: 7rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--gray-800);
+    border-radius: 1.5rem;
+    color: var(--gray-300);
+    background: var(--gradient-subtle);
+    box-shadow: var(--shadow-sm);
+}
 
-	.mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
-	}
+@media (min-width: 50em) {
+    .mention-card {
+        border-radius: 1.5rem;
+        height: 9.5rem;
+    }
+}
 
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
-		}
-	}
+/* Contact Section Styles */
+/* Light mode */
+:root[data-theme="light"] {
+    --contact-bg: rgba(255, 255, 255, 0.8);
+    --contact-border: rgba(229, 231, 235, 1);
+    --contact-text: rgba(75, 85, 99, 1);
+    --input-bg: rgba(249, 250, 251, 0.8);
+    --input-text: rgba(17, 24, 39, 1);
+    --input-placeholder: rgba(107, 114, 128, 1);
+}
+
+/* Dark mode */
+:root[data-theme="dark"] {
+    --contact-bg: rgba(17, 24, 39, 0.5);
+    --contact-border: rgba(75, 85, 99, 0.2);
+    --contact-text: rgba(156, 163, 175, 1);
+    --input-bg: rgba(17, 24, 39, 0.3);
+    --input-text: rgba(255, 255, 255, 0.9);
+    --input-placeholder: rgba(156, 163, 175, 1);
+}
+
+/* Contact Container Styles */
+.contact-container {
+    transition: all 0.3s ease;
+    background-color: var(--contact-bg);
+    border-color: var(--contact-border);
+}
+
+/* Contact Text Styles */
+.contact-text {
+    color: var(--contact-text);
+}
+
+/* Form Input Styles */
+.contact-input {
+    background-color: var(--input-bg);
+    border-color: var(--contact-border);
+    color: var(--input-text);
+    transition: all 0.3s ease;
+}
+
+.contact-input::placeholder {
+    color: var(--input-placeholder);
+}
+
+.contact-input:focus {
+    border-color: var(--accent-regular);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-regular-alpha);
+}
+
+/* Contact Icons Background */
+.contact-icon-bg {
+    background-color: var(--accent-regular);
+    color: var(--accent-text-over);
+    transition: all 0.3s ease;
+}
+
+/* Contact Button Hover Effect */
+.contact-button {
+    transition: all 0.2s ease;
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+    background-color: var(--accent-dark);
+}
+
+/* Mobile Responsiveness for Contact Section */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
 </style>
