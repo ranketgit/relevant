@@ -20,9 +20,6 @@ import Skills from '../components/Skills.astro';
 const projects = (await getCollection('work'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
 ---
 
 <BaseLayout title="Home Page - Relevant" description="This is the home page of relevant">
@@ -48,8 +45,65 @@ const projects = (await getCollection('work'))
 			</header>
 		</div>
 
+		<section id="services" class="py-16 relative">
+			{/* Section Header */}
+			<div class="text-center max-w-2xl mx-auto px-4 mb-12">
+				<h3 class="text-4xl font-bold mb-4">What We Do Best</h3>
+				<p class="text-gray-400 text-lg">
+					Our expertise in content creation and marketing helps brands stay ahead in the digital landscape
+				</p>
+			</div>
+		
+			{/* Services Grid */}
+			<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+				{/* Content Strategy Card */}
+				<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
+					<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+						</svg>
+					</div>
+					<h4 class="text-xl font-bold mb-4">Content Strategy & Planning</h4>
+					<p class="text-gray-400">We design data-driven strategies tailored to your audience and business goals.</p>
+				</div>
+		
+				{/* Social Media Card */}
+				<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
+					<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+						</svg>
+					</div>
+					<h4 class="text-xl font-bold mb-4">Social Media Management</h4>
+					<p class="text-gray-400">From ideation to execution, we create content that keeps your audience engaged and growing.</p>
+				</div>
+		
+				{/* Video Production Card */}
+				<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
+					<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+						</svg>
+					</div>
+					<h4 class="text-xl font-bold mb-4">Video Production & Viral Campaigns</h4>
+					<p class="text-gray-400">High-quality video content that entertains, informs, and converts.</p>
+				</div>
+		
+				{/* Analytics Card */}
+				<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
+					<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+						</svg>
+					</div>
+					<h4 class="text-xl font-bold mb-4">Analytics & Optimization</h4>
+					<p class="text-gray-400">We measure, analyze, and optimize your content for better performance and ROI.</p>
+				</div>
+			</div>
+		</section>
+
 		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section relative with-background">
+			<section id="work" class="section relative with-background">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Proof of Relevance</h3>
 					<p>Here's how we've helped brands capture attention and drive growth</p>
@@ -67,17 +121,7 @@ const projects = (await getCollection('work'))
 					</Grid>
 				</div>
 			
-				<div class="w-full flex justify-center items-center mt-16 md:col-span-4">
-					<div class="bg-gray-900/5 backdrop-blur-sm items-center text-center border border-gray-800 rounded-2xl p-8 w-full max-w-4xl mx-auto">
-						<p class="text-xl text-center text-gray-500 mb-6">Want to see more? Let's chat about what we can do for your brand.</p>
-						<a 
-							href="/#contact" 
-							class="inline-flex items-center px-8 py-3 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 hover:scale-105 transform transition-all duration-200"
-						>
-							Let's Talk
-						</a>
-					</div>
-				</div>
+			
 
 			</section>
 
@@ -96,9 +140,7 @@ const projects = (await getCollection('work'))
 						
 						<div class="space-y-6">
 							<div class="flex items-center gap-4">
-								<div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-600 text-white">
-									✉
-								</div>
+								
 								<div>
 									<h5 class="text-lg font-semibold">Email</h5>
 									<a href="mailto:contact@relevant.ma" class="text-gray-400 hover:text-purple-500 transition-colors">
@@ -108,9 +150,7 @@ const projects = (await getCollection('work'))
 							</div>
 			
 							<div class="flex items-center gap-4">
-								<div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-600 text-white">
-									📞
-								</div>
+								
 								<div>
 									<h5 class="text-lg font-semibold">Phone</h5>
 									<a href="tel:+21263524627" class="text-gray-400 hover:text-purple-500 transition-colors">
@@ -120,9 +160,7 @@ const projects = (await getCollection('work'))
 							</div>
 			
 							<div class="flex items-center gap-4">
-								<div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-600 text-white">
-									📍
-								</div>
+								
 								<div>
 									<h5 class="text-lg font-semibold">Location</h5>
 									<p class="text-gray-400">Technopark Casablanca, Morocco</p>
@@ -203,62 +241,7 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section id="services" class="py-16 relative">
-				{/* Section Header */}
-				<div class="text-center max-w-2xl mx-auto px-4 mb-12">
-					<h3 class="text-4xl font-bold mb-4">What We Do Best</h3>
-					<p class="text-gray-400 text-lg">
-						Our expertise in content creation and marketing helps brands stay ahead in the digital landscape
-					</p>
-				</div>
 			
-				{/* Services Grid */}
-				<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-					{/* Content Strategy Card */}
-					<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
-						<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-							</svg>
-						</div>
-						<h4 class="text-xl font-bold mb-4">Content Strategy & Planning</h4>
-						<p class="text-gray-400">We design data-driven strategies tailored to your audience and business goals.</p>
-					</div>
-			
-					{/* Social Media Card */}
-					<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
-						<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-							</svg>
-						</div>
-						<h4 class="text-xl font-bold mb-4">Social Media Management</h4>
-						<p class="text-gray-400">From ideation to execution, we create content that keeps your audience engaged and growing.</p>
-					</div>
-			
-					{/* Video Production Card */}
-					<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
-						<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-							</svg>
-						</div>
-						<h4 class="text-xl font-bold mb-4">Video Production & Viral Campaigns</h4>
-						<p class="text-gray-400">High-quality video content that entertains, informs, and converts.</p>
-					</div>
-			
-					{/* Analytics Card */}
-					<div class="bg-gray-800/5 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-purple-500">
-						<div class="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-500 transition-transform duration-300 hover:rotate-360">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-							</svg>
-						</div>
-						<h4 class="text-xl font-bold mb-4">Analytics & Optimization</h4>
-						<p class="text-gray-400">We measure, analyze, and optimize your content for better performance and ROI.</p>
-					</div>
-				</div>
-			</section>
 		</main>
 
 		<ContactCTA />
